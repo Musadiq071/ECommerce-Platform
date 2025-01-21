@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <!-- Title of the webpage -->
+    <title>FAQs</title>
+</head>
+
+<body>
+</body>
+<div class="question">
+    <!-- FAQ header -->
+    <h2>Frequently Asked Questions</h2>
+</div>
+
+<!-- FAQ items with accordion-style buttons and content -->
+<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-button" id="accordion-button-1">
+            <span>
+                Can i pay by credit card
+            </span>
+            <span class="icon">
+                <img style="height:35px; width:35px" src="\Images\arrow.png" class="up" id="up1" alt="" />
+            </span>
+        </button>
+        <div class="accordion-content" id="accordion-content-1">
+            <p>
+                Certainly! Smart Shop offers various payment options, including credit cards, debit cards, and convenient "Buy Now, Pay Later" choices to enhance your shopping experience.
+            </p>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button" id="accordion-button-2">
+                <span>
+                    Does Smart shop offers free delivery
+                </span>
+                <span class="icon">
+                    <img style="height:35px; width:35px" src="\Images\arrow.png" class="up" id="up2" alt="" />
+                </span>
+            </button>
+            <div class="accordion-content" id="accordion-content-2">
+                <p>
+                    Certainly! Smart Shop offers free delivery on orders above 20 euros, making your shopping experience not only convenient but also budget-friendly.
+                </p>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button" id="accordion-button-3">
+                    <span>
+                        Can i Return the Item
+                    </span>
+                    <span class="icon">
+                        <img style="height:35px; width:35px" src="\Images\arrow.png" " class="up" id="up3" alt="" />
+                    </span>
+                </button>
+                <div class="accordion-content" id="accordion-content-3">
+                    <p>
+                        Absolutely! Smart Shop allows hassle-free returns within a specified period. Please check our return policy for more details on the return process.
+                    </p>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button" id="accordion-button-4">
+                        <span>
+                            What is average delivery time
+                        </span>
+                        <span class="icon">
+                            <img style="height:35px; width:35px" src="\Images\arrow.png" class="up" id="up4" alt="" />
+                        </span>
+                    </button>
+                    <div class="accordion-content" id="accordion-content-4">
+                        <p>
+                            The average delivery time at Smart Shop is typically 3 to 4 business days. However, actual delivery times may vary based on your location and chosen shipping method.
+
+
+                        </p>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" id="accordion-button-5">
+                            <span>
+                                How to apply for a refund
+                            </span>
+                            <span class="icon">
+                                <img style="height:35px; width:35px" src="\Images\arrow.png" class="up" id="up5" alt="" />
+                            </span>
+                        </button>
+                        <div class="accordion-content" id="accordion-content-5">
+                            <p>
+                                To apply for a refund at Smart Shop, please contact our customer support within 15 days of receiving your order. Provide your order details and reason for the refund, and our team will guide you through the process.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Scripts for jQuery and custom JavaScript -->
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+                <script src="JavaScript.js"></script>
+                <!-- Section with a button to redirect to the homepage -->
+                <section class="section-container">
+                    <div class="button-bh">
+                        <button style=" background-color: #3498db; color: #ffffff;" class=" button-bh" onclick="redirectToHomePage()" role="button">Back to HomePage</button>
+                    </div>
+                </section>
+                <!-- JavaScript function to redirect to the homepage -->
+                <script>
+                    function redirectToHomePage() {
+
+                        window.location.href = "/Homepage.aspx";
+                    }
+                </script>
+
+</html>

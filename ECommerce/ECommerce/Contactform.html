@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheetC.css"; />
+
+</head>
+<body>
+    <div id="overlay">
+        <!-- Form with a JavaScript function to validate on submit -->
+        <form onsubmit="event.preventDefault(); validateForm()">
+            <!-- Form title -->
+            <h1>Contact US</h1>
+            <!-- Input field for the name -->
+            <label for="name ">Name</label>
+            <input type="text" id="name" placeholder="your name" />
+            <small class="error"></small>
+            <!-- Input field for the email -->
+            <label for="email ">Email</label>
+            <input type="text" id="email" placeholder="your email" />
+            <small class="error"></small>
+            <!-- Textarea for the message -->
+            <label for="message ">Message:</label>
+            <textarea id="message" placeholder="your message" rows="6"></textarea>
+            <small class="error"></small>
+            <!-- Container for the submit button and success message -->
+            <div class="center">
+                <input type="submit" value="Send Message" />
+                <p id="success"></p>
+            </div>
+        </form>
+
+    </div>
+    <!-- Link to an external JavaScript file (JavaScriptC.js) -->
+    <script src="JavaScriptC.js"></script>
+</body>
+</html>

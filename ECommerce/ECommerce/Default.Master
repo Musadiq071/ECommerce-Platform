@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="ECommerce.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+         <!-- This is the content placeholder for the head section of the master page -->
+    </asp:ContentPlaceHolder>
+</head>
+
+    
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style ="width:1100px; margin:0 auto;" >
+                <tr style =" width:1100px; height:50px; border-color:#5f98f3; background-color:white;">
+                    <td style=" width:100px">
+                        <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/Images/Logo.png" Width="100px" /></td>
+                    <td style=" width:780px" align="center">
+                        <asp:Label ID="Label1" runat="server" Text="Smart Shop" 
+                        Font-Bold="True" Font-Italic="True" Font-Names="Eras Bold ITC" Font-Overline="False" Font-Size="35px" Font-Underline="False" ForeColor="Black" Height="56px" Width="280px"></asp:Label>
+                   <br /> <b> A place where you find what ever you need</b>  </td>
+                    <td style="width:220px; text-align:right">
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="50px" ImageUrl="~/Images/faceb.png"  Width="50px"  style="text-align:left" PostBackUrl="https://www.facebook.com/" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="50px" ImageUrl="~/Images/Insta.png" Width="50px" style="text-align:left" PostBackUrl="https://www.instagram.com/?hl=en" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="50px" ImageUrl="~/Images/Twitter.png" Width="50px" style="text-align:left" PostBackUrl="https://twitter.com/?lang=en-ie" />
+                        <asp:ImageButton ID="ImageButton4" runat="server" CausesValidation="False" Height="50px" ImageUrl="~/Images/cart.png" Width="50px" style="text-align:left" PostBackUrl="Addtocart.aspx" />
+                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="#5F98F3" Height="50px" Width="50px"></asp:Label>
+                    </td>
+                </tr>
+                 <tr style="width:100px; height:40px; background-color:darkgray">
+                    <td colspan="3">
+                        <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="19px">
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Homepage.aspx" ></asp:MenuItem>
+                                <asp:MenuItem Text="All Products" Value="All Products" NavigateUrl="~/Homepage.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/Aboutus.html"></asp:MenuItem>
+                                <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="Contactform.html"></asp:MenuItem>
+                                <asp:MenuItem Text="Register" Value="Register" NavigateUrl="~/Register.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                                  <asp:MenuItem Text="FAQs" Value="FAQs" NavigateUrl="FAQs.html"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#FF6666" BorderColor="#FF6666" BorderStyle="Outset" ForeColor="White" Height="40px" />
+                            <StaticMenuItemStyle Font-Bold="True" Font-Italic="False" ForeColor="Black" HorizontalPadding="48px" />
+                            <StaticSelectedStyle BackColor="#FF5050" BorderColor="#FF6666" BorderStyle="Inset" ForeColor="#666666" Height="40px" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+ 
+                <!--Discounted products banner-->
+                <tr style="width:1110px; height:310px;">
+                    <td colspan="3">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick"></asp:Timer>
+                                <asp:Image ID="addimg" runat="server" BackColor="Gray" BorderColor="White" BorderStyle="Double" Height="277px" Width="1140px" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </td>
+                </tr>
+ 
+                <tr>
+                    <td colspan="3">  
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder> 
+                        </td>
+                </tr>
+
+                <tr>
+                    <td colspan =" 3">
+                </tr>
+
+                    <tr style=" width:1100px; height:25px; background-color:darkgray; text-align:center; color:white">
+                        <td colspan="3">
+                            &copy; Smart Shop LLC. || All Rights Reserved.
+                        </td>
+                    </tr>
+                </table>
+            </footer>
+
+
+        
+        </div>
+    </form>
+</body>
+</html>
